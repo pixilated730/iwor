@@ -1,25 +1,17 @@
-/** @jsx jsx */
-import { jsx } from "theme-ui"
-import { Link } from "gatsby"
-import { RiHeart2Line } from "react-icons/ri"
+import React from 'react';
+import { Heart } from 'lucide-react';
 
-const Footer = () => (
-  <footer
-    className="site-footer"
-    sx={{
-      bg: "siteColor",
-    }}
-  >
-    <div className="container">
-      <p>
-        A GatsbyJS Starter for Netlify CMS, Made with{" "}
-        <span className="icon -love">
-          <RiHeart2Line />
-        </span>{" "}
-        by <Link to="/">Stackrole.com</Link>
-      </p>
-    </div>
-  </footer>
-)
+const Footer = () => {
+  return (
+    <footer className="w-full bg-primary p-4">
+      <div className="container mx-auto text-center">
+        <p className="flex items-center justify-center gap-2 text-white">
+          Made with
+          <Heart className="text-red-500" size={16} />
+        </p>
+      </div>
+    </footer>
+  );
+};
 
-export default Footer
+export default Footer;
